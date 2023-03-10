@@ -1,0 +1,70 @@
+<script>
+  // membuat variable untuk data pegawai
+  let pegawai = "Ahmad Taufik Aurahman";
+  let jabatan = "Manager";
+  let status = "Sudah Menikah";
+
+  // proses menentukan gaji
+  let gajiPokok;
+  if (jabatan == "Manager") {
+    gajiPokok = 10;
+  } else if (jabatan == "Asisten manager") {
+    gajiPokok = 80;
+  } else if (jabatan == "Staff") {
+    gajiPokok = 50;
+  } else {
+    gajiPokok = 0;
+  }
+
+  // membuat variable untuk tunjangan jabatan dan bpjs
+  let tunjanganJabatan = 0.1 * gajiPokok;
+  let bpjs = 0.1 * gajiPokok;
+
+  // proses untuk menentukan tunjangan sudah menikah
+  let tunjanganSudahMenikah;
+  if (status == "Sudah Menikah") {
+    tunjanganSudahMenikah = 0.1 * gajiPokok;
+  } else {
+    tunjanganSudahMenikah = 0;
+  }
+
+  //   proses untuk menghitung total pendapatan atau penghasilan
+  let totalPendapatan = gajiPokok + tunjanganJabatan + bpjs + tunjanganSudahMenikah;
+
+  // cetak data pegawai
+  document.write("<h3>Tugas 2 Javascript</h3>");
+  document.write("<h4>Menampilkan Data Pegawai</h4>");
+  document.write(
+    "Nama : " +
+      pegawai +
+      "<br>Jabatan : " +
+      jabatan +
+      "<br>Status : " +
+      status +
+      "<br>Gaji Pokok : " +
+      gajiPokok +
+      " juta" +
+      "<br>Tunjangan Jabatan : " +
+      tunjanganJabatan +
+      " juta" +
+      "<br>BPJS : " +
+      bpjs +
+      " juta" +
+      "<br>Tunjangan Sudah Menikah : " +
+      tunjanganSudahMenikah +
+      " juta" +
+      "<br>Total Pendapatan atau Penghasilan " +
+      totalPendapatan +
+      " juta"
+  );
+
+  // testing
+  console.log(`nama : ${pegawai}`);
+  console.log(`jabatan : ${jabatan}`);
+  console.log(`status : ${status}`);
+  console.log(`gaji pokok : ${gajiPokok}`);
+  console.log(`tunjangan jabatan : ${tunjanganJabatan}`);
+  console.log(`bpjs : ${bpjs}`);
+  console.log(`tunjangan sudah menikah : ${tunjanganSudahMenikah}`);
+  console.log(`total pendapatan atau penghasilan : ${totalPendapatan}`);
+</script>
